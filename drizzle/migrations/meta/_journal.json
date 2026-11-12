@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1794473388555,
+      "tag": "0000_socialpilot_user_content",
+      "breakpoints": true
+    }
+  ]
+}
