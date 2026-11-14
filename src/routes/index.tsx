@@ -5,9 +5,9 @@ import { SocialPilotApp } from "@/components/socialpilot-app";
 // project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
-    { title: "Workspace demo | SocialPilot A" },
-    { name: "description", content: "Explore the SocialPilot A sample social content workspace." },
-    { property: "og:title", content: "Workspace demo | SocialPilot A" },
+    { title: "Workspace demo | SocialPilot AI" },
+    { name: "description", content: "Explore the SocialPilot AI sample social content workspace." },
+    { property: "og:title", content: "Workspace demo | SocialPilot AI" },
     { property: "og:description", content: "Explore social content planning with sample data." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },

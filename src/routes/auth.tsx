@@ -7,9 +7,9 @@ import { Label } from "@/components/ui/label";
 
 export const Route = createFileRoute("/auth")({
   head: () => ({ meta: [
-    { title: "Sign in | SocialPilot A" },
-    { name: "description", content: "Sign in to your SocialPilot A content workspace." },
-    { property: "og:title", content: "Sign in | SocialPilot A" },
+    { title: "Sign in | SocialPilot AI" },
+    { name: "description", content: "Sign in to your SocialPilot AI content workspace." },
+    { property: "og:title", content: "Sign in | SocialPilot AI" },
     { property: "og:description", content: "Access your saved social content." },
     { property: "og:type", content: "website" },
     { name: "twitter:card", content: "summary_large_image" },
@@ -31,7 +31,7 @@ function AuthPage() {
       } catch { setMessage("Sign-in could not be completed. Please try again."); }
       finally { setPending(false); }
     }}>
-      <h1 className="text-3xl font-semibold">SocialPilot A</h1>
+      <h1 className="text-3xl font-semibold">SocialPilot AI</h1>
       <h2 className="text-xl">Sign in</h2>
       <div className="space-y-2"><Label htmlFor="email">Email</Label><Input id="email" type="email" autoComplete="email" required value={email} onChange={(event) => setEmail(event.target.value)} /></div>
       <div className="space-y-2"><Label htmlFor="password">Password</Label><Input id="password" type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} /></div>
