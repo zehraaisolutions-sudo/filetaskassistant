@@ -28,10 +28,10 @@ export const generateSocialContent = createServerFn({ method: "POST" })
     const text = result.output.flatMap((item) => item.type === "message" ? item.content.filter((part) => part.type === "output_text").map((part) => part.text) : []).join("\n");
     const parsed = JSON.parse(text) as Record<string, unknown>;
     const output = {
-      post_text: typeof parsed.post_text === "string" ? parsed.post_text : "",
-      caption: typeof parsed.caption === "string" ? parsed.caption : "",
-      hashtags: typeof parsed.hashtags === "string" ? parsed.hashtags : "",
-      call_to_action: typeof parsed.call_to_action === "string" ? parsed.call_to_action : "",
+      post_text: typeof parsed['post_text'] === "string" ? parsed['post_text'] : "",
+      caption: typeof parsed['caption'] === "string" ? parsed['caption'] : "",
+      hashtags: typeof parsed['hashtags'] === "string" ? parsed['hashtags'] : "",
+      call_to_action: typeof parsed['call_to_action'] === "string" ? parsed['call_to_action'] : "",
     };
     if (!output.post_text || !output.caption || !output.hashtags || !output.call_to_action) throw new Error("The AI returned an incomplete draft. Please try generating again.");
     return output;

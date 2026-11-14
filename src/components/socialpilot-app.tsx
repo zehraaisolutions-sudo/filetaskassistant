@@ -67,7 +67,7 @@ export function SocialPilotApp({ demo = false }: { demo?: boolean }) {
       if (!mounted) return;
       const user = userResult.user;
       if (!user) { setReady(true); return; }
-      const metadataName = typeof user.user_metadata?.display_name === "string" ? user.user_metadata.display_name : user.email?.split("@")[0] ?? "there";
+      const metadataName = typeof user.user_metadata?.['display_name'] === "string" ? user.user_metadata['display_name'] : user.email?.split("@")[0] ?? "there";
       setDisplayName(metadataName);
       const [{ data: profile }, { data: voiceRows }, { data: contentRows }] = await Promise.all([
         supabase.from("profiles").select("display_name").eq("id", user.id).maybeSingle(),
